@@ -3,7 +3,7 @@
 @@ -54,21 +54,21 @@
          - b: 2
          """)
-
+ 
 -    @pytest.mark.skipif(sys.version_info >= (3, 0) or
 -                        platform.python_implementation() != "CPython",
 -                        reason="ruamel.yaml not available")
@@ -34,3 +34,6 @@
 +    #     - a: 1
 +    #     - b: 2
 +    #     """)
+ 
+     def test_CommentedSet(self):
+         from ruamel.yaml.constructor import CommentedSet
