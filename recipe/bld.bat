@@ -5,7 +5,7 @@ set LIB=%LIBRARY_LIB%;%LIB%
 FOR /F "delims=" %%i IN ('cygpath.exe -u %SRC_DIR%') DO set "SRC_DIRU=%%i"
 FOR /F "delims=" %%i IN ('cygpath.exe -u %RECIPE_DIR%') DO set "RECIPE_DIRU=%%i"
 
-bash %RECIPE_DIR%\prepare.bash %RECIPE_DIRU% %SRC_DIRU%
+bash %RECIPE_DIR%\prepare.bash %RECIPE_DIR% %SRC_DIR%
 if errorlevel 1 exit 1
 
 %PYTHON% setup.py install
