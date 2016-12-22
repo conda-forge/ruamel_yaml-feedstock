@@ -7,8 +7,6 @@ SRC_DIR=${2-$SRC_DIR}
 VERSION=$(python $SRC_DIR/setup.py --version)
 echo "VERSION=$VERSION"
 
-patch -p1 < $RECIPE_DIR/ordereddict_test.patch
-
 rm -f $SRC_DIR/setup.py
 rm -f $SRC_DIR/ext/_ruamel_yaml.c
 

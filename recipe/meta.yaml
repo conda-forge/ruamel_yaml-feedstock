@@ -16,7 +16,7 @@ build:
 requirements:
   build:
     - toolchain
-    - m2-bash             # [win]
+    - posix
     - python
     - setuptools
     - cython
