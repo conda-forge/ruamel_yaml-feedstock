@@ -1,8 +1,12 @@
-#!/bin/bash -eu
+#!/bin/bash -exu
+#
+# This scripts expects to be run in $SRC_DIR, while the script itself should
+# be stored in $RECIPE_DIR.
+
+RECIPE_DIR=$(dirname $0)
+SRC_DIR=.
 
 env | sort
-RECIPE_DIR=${1-$RECIPE_DIR}
-SRC_DIR=${2-$SRC_DIR}
 
 VERSION=$(python $SRC_DIR/setup.py --version)
 echo "VERSION=$VERSION"
