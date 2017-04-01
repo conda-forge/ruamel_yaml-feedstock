@@ -10,7 +10,7 @@ source:
   sha256: b78d394e192b6d0911bd59f794ceea88143fac4e373b76ed7e48143a2a29b33c
 
 build:
-  number: 0
+  number: 1
   no_link: .*\.(pyd|dll)  # [win]
   features:
     - vc9     [win and py27]
