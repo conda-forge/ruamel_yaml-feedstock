@@ -10,15 +10,17 @@ source:
   sha256: 51d9435dfccf55e679456181869019221daf409b1e74640d5dfa97d5976f823b
   patches:
     - ordereddict_test.patch
-      
+
 build:
-  number: 0
+  number: 1
   no_link: .*\.(pyd|dll)   # [win]
 
 requirements:
   build:
-    - {{ compiler("c") }}
     - posix                # [win]
+    - {{ compiler('c') }}
+  host:
+    - {{ compiler("c") }}
 
   host:
     - python
