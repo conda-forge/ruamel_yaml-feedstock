@@ -16,10 +16,8 @@ import ruamel_yaml  # NOQA
 
 SP_DIR = os.getenv('SP_DIR', '.')
 PREFIX = os.getenv('PREFIX', '.')
-library_dirs = [os.path.join(SP_DIR, 'ruamel_yaml/ext'), os.path.join(PREFIX, 'lib')]
-extensions = [Extension("ruamel_yaml.ext._ruamel_yaml",
-                        ['ruamel_yaml/ext/_ruamel_yaml.pyx'],
-                        libraries=['yaml'],
+library_dirs = [os.path.join(PREFIX, 'lib')]
+extensions = [Extension(libraries=['yaml'],
                         library_dirs=library_dirs,
                         include_dirs=[os.path.join(PREFIX, 'include')],
                         runtime_library_dirs=[] if sys.platform == 'win32' else library_dirs)]
@@ -44,8 +42,7 @@ setup(
         "Topic :: Text Processing :: Markup"
     ],
     packages=[
-        'ruamel_yaml',
-        'ruamel_yaml.ext',
+        'ruamel_yaml'
     ],
     zip_safe=False,
 )
