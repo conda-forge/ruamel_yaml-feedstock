@@ -11,8 +11,5 @@ if errorlevel 1 exit 1
 %PYTHON% -m pip install . --no-deps --ignore-installed -vvv
 if errorlevel 1 exit 1
 
-copy %LIBRARY_BIN%\yaml.dll %SP_DIR%\ruamel_yaml\ext\
-if errorlevel 1 exit 1
-
 rd /s /q %SP_DIR%\__pycache__
 if errorlevel 1 echo nvd
