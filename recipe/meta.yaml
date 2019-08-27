@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://bitbucket.org/ruamel/yaml/get/{{ version }}.tar.gz
-  sha256: 8e02848907ba574fd4df5e2b40872c049a916c746ca7d75a5291240d9ec623b2
+  sha256: 766e7e8ddd5278159b1ec67fca62657fbd43098f28e46573cf659cc4d27cb399
   patches:
     - ordereddict_test.patch
 
