@@ -11,7 +11,7 @@ source:
     - ordereddict_test.patch
 
 build:
-  number: 1000
+  number: 1001
   no_link: .*\.(pyd|dll)   # [win]
 
 requirements:
@@ -23,11 +23,9 @@ requirements:
     - python
     - pip
     - cython
-    - yaml
 
   run:
     - python
-    - yaml
 
 test:
   requires:
