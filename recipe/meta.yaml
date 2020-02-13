@@ -1,12 +1,13 @@
+{% set name = "ruamel.yaml" %}
 {% set version = "0.15.80" %}
 
 package:
-  name: ruamel_yaml
+  name: {{ name | lower | replace(".", "_") }}
   version: {{ version }}
 
 source:
-  url: https://bitbucket.org/ruamel/yaml/get/{{ version }}.tar.gz
-  sha256: 8529f909d8983a2b80bb3af60e425c418edf54f2fa132d863c43b3353f901203
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4f203351575dba0829c7b1e5d376d08cf5f58e4a2b844e8ce552b3e41cd414e6
   patches:
     - ordereddict_test.patch
 
@@ -38,7 +39,7 @@ test:
     - ruamel_yaml.ext._ruamel_yaml
 
 about:
-  home: https://bitbucket.org/ruamel/yaml
+  home: https://yaml.readthedocs.io/en/latest/
   license: MIT
   license_family: MIT
   license_file: LICENSE
