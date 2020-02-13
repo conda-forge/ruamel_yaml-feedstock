@@ -1,7 +1,7 @@
 About ruamel_yaml
 =================
 
-Home: https://bitbucket.org/ruamel/yaml
+Home: https://yaml.readthedocs.io/en/latest/
 
 Package license: MIT
 
