@@ -2,7 +2,7 @@
 {% set version = "0.15.80" %}
 
 package:
-  name: {{ name | lower | replace(".", "_") }}
+  name: ruamel_yaml
   version: {{ version }}
 
 source:
