@@ -9,7 +9,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4f203351575dba0829c7b1e5d376d08cf5f58e4a2b844e8ce552b3e41cd414e6
   patches:
-    - recipe/ordereddict_test.patch
+    - ordereddict_test.patch
 
 build:
   number: 1001
