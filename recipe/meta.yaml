@@ -9,7 +9,7 @@ source:
   sha256: 4f203351575dba0829c7b1e5d376d08cf5f58e4a2b844e8ce552b3e41cd414e6
 
 build:
-  number: 1005
+  number: 1006
   no_link: .*\.(pyd|dll)   # [win]
 
 requirements:
